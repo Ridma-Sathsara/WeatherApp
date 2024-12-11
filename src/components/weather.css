@@ -1,0 +1,247 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1E90FF, #6fcfef);  /* Light blue gradient */
+    font-family: 'Lato', sans-serif;
+    position: relative; /* Ensure it's the parent of the stars */
+    z-index: 0; 
+}
+
+
+/* Starry Background and Animations */
+@keyframes animStar {
+    from {
+        transform: translateY(50px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+
+/* Star Layers */
+#stars, #stars2, #stars3, #stars4, #stars5, #stars6, #stars7, #stars8, #stars9, #stars10, #stars11, #stars12 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: animStar infinite linear;
+    z-index: 1; /* Ensure stars are behind content */
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+
+
+#stars {
+    width: 4px; /* Size of each star */
+    height: 4px; /* Same height to make them round */
+    background: #fff; /* White color for stars */
+    border-radius: 50%; /* Make stars round */
+    filter: blur(0.5px);
+    animation: animStar 100s linear infinite;
+    box-shadow: 
+        50px 50px 0 0 #fff, 100px 150px 0 0 #fff, 150px 200px 0 0 #fff, 
+        200px 300px 0 0 #fff, 250px 100px 0 0 #fff, 300px 500px 0 0 #fff, 
+        350px 400px 0 0 #fff, 400px 600px 0 0 #fff, 450px 700px 0 0 #fff, 
+        500px 800px 0 0 #fff, 550px 250px 0 0 #fff, 600px 350px 0 0 #fff, 
+        650px 500px 0 0 #fff, 700px 600px 0 0 #fff, 750px 700px 0 0 #fff, 
+        800px 150px 0 0 #fff, 850px 300px 0 0 #fff, 900px 500px 0 0 #fff, 
+        950px 600px 0 0 #fff, 1000px 700px 0 0 #fff, 1050px 250px 0 0 #fff, 
+        1100px 300px 0 0 #fff, 1150px 500px 0 0 #fff, 1200px 600px 0 0 #fff, 
+        1250px 200px 0 0 #fff, 1300px 150px 0 0 #fff, 1350px 700px 0 0 #fff, 
+        1400px 800px 0 0 #fff, 1450px 250px 0 0 #fff, 1500px 350px 0 0 #fff, 
+        1550px 450px 0 0 #fff, 1600px 550px 0 0 #fff, 1650px 200px 0 0 #fff, 
+        1700px 600px 0 0 #fff, 1750px 150px 0 0 #fff, 1800px 100px 0 0 #fff, 
+        1850px 450px 0 0 #fff, 1900px 550px 0 0 #fff, 1950px 600px 0 0 #fff, 
+        2000px 700px 0 0 #fff;
+    animation-duration: 150s;
+}
+
+#stars2 {
+    width: 3px; /* Slightly bigger round stars */
+    height: 3px; /* Same height for round shape */
+    background: transparent;
+    box-shadow: 0 0 0 3px #FFF, 200px 200px 0 3px #FFF, 400px 400px 0 3px #FFF, 600px 600px 0 3px #FFF, 800px 800px 0 3px #FFF;
+    animation-duration: 120s;
+}
+
+#stars3 {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: 0 0 0 4px #FFF, 250px 250px 0 4px #FFF, 450px 450px 0 4px #FFF, 650px 650px 0 4px #FFF, 850px 850px 0 4px #FFF;
+    animation-duration: 140s;
+}
+
+#stars4 {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    box-shadow: 0 0 0 5px #FFF, 300px 300px 0 5px #FFF, 500px 500px 0 5px #FFF, 700px 700px 0 5px #FFF, 900px 900px 0 5px #FFF;
+    animation-duration: 160s;
+}
+
+#stars5 {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    box-shadow: 0 0 0 6px #FFF, 350px 350px 0 6px #FFF, 550px 550px 0 6px #FFF, 750px 750px 0 6px #FFF, 950px 950px 0 6px #FFF;
+    animation-duration: 180s;
+}
+
+#stars6 {
+    width: 7px;
+    height: 7px;
+    background: transparent;
+    box-shadow: 0 0 0 7px #FFF, 400px 400px 0 7px #FFF, 600px 600px 0 7px #FFF, 800px 800px 0 7px #FFF, 1000px 1000px 0 7px #FFF;
+    animation-duration: 200s;
+}
+
+#stars7 {
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    box-shadow: 0 0 0 8px #FFF, 450px 450px 0 8px #FFF, 650px 650px 0 8px #FFF, 850px 850px 0 8px #FFF, 1050px 1050px 0 8px #FFF;
+    animation-duration: 220s;
+}
+
+#stars8 {
+    width: 9px;
+    height: 9px;
+    background: transparent;
+    box-shadow: 0 0 0 9px #FFF, 500px 500px 0 9px #FFF, 700px 700px 0 9px #FFF, 900px 900px 0 9px #FFF, 1100px 1100px 0 9px #FFF;
+    animation-duration: 240s;
+}
+
+#stars9 {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    box-shadow: 0 0 0 10px #FFF, 550px 550px 0 10px #FFF, 750px 750px 0 10px #FFF, 950px 950px 0 10px #FFF, 1150px 1150px 0 10px #FFF;
+    animation-duration: 260s;
+}
+
+#stars10 {
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    box-shadow: 0 0 0 11px #FFF, 600px 600px 0 11px #FFF, 800px 800px 0 11px #FFF, 1000px 1000px 0 11px #FFF, 1200px 1200px 0 11px #FFF;
+    animation-duration: 280s;
+}
+
+#stars11 {
+    width: 9px;
+    height: 9px;
+    background: transparent;
+    box-shadow: 0 0 0 9px #FFF, 500px 500px 0 9px #FFF, 1000px 1000px 0 9px #FFF, 1500px 1500px 0 9px #FFF, 2000px 2000px 0 9px #FFF;
+    animation-duration: 700s;
+}
+
+#stars12 {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    box-shadow: 0 0 0 10px #FFF, 600px 600px 0 10px #FFF, 1200px 1200px 0 10px #FFF, 1800px 1800px 0 10px #FFF, 2400px 2400px 0 10px #FFF;
+    animation-duration: 800s;
+}
+
+/* Title at the top of the page */
+#title {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5rem;
+    color: #FFF;
+    text-align: center;
+    z-index: 10; /* Ensure title is above stars */
+}
+
+/* Gradient effect for the title text */
+#title span {
+    background: linear-gradient(to left, rgb(255, 255, 255), #002998);  /* Gradient background */
+    background-clip: text;  /* Standard property for background-clip */
+    -webkit-background-clip: text;  /* WebKit-specific for compatibility */
+    color: transparent;  /* Ensure the text itself is transparent so the gradient shows through */
+}
+
+/* Weather Card Styling */
+.MuiCard-root {
+    background-color: rgba(226, 192, 192, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.MuiTypography-h5 {
+    color: #fff;
+}
+
+.MuiButton-root {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 25px;
+    text-transform: none;
+}
+
+.MuiButton-root:hover {
+    background-color: #45a049;
+}
+/* Forecast Table Styling */
+table {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border-collapse: collapse;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    /* border: 2px solid #ffffff;  */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8); 
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  Add glowing effect when hovered
+  /* table:hover {
+    box-shadow: 0 0 0px 200px rgb(0, 0, 0); 
+  } */
+  
+  /* Table Headers */
+  thead th {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Table Body Rows */
+  tbody td {
+    padding: 8px;
+    text-align: center;
+    
+  }
+  
+  /* Styling for even and odd rows for better contrast */
+  tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Ensure the text in the table is aligned and visually clear */
+  tbody tr td {
+    font-size: 1rem;
+  }
+  
