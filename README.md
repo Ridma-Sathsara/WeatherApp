@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack weather application with React frontend and Node.js/Express backend.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+```
+Weather-App/
+├── frontend/                 # React frontend application
+│   ├── public/              # Static files
+│   ├── src/                 # React source code
+│   │   ├── components/      # React components
+│   │   │   ├── weather.js
+│   │   │   └── weather.css
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── .env                 # Frontend environment variables (not in git)
+│   ├── .env.example         # Frontend environment template
+│   └── package.json
+│
+├── backend/                 # Express backend server
+│   ├── server.js           # Main server file
+│   ├── .env                # Backend environment variables (not in git)
+│   ├── .env.example        # Backend environment template
+│   └── package.json
+│
+├── .gitignore
+└── README.md
+```
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Weather API key from [WeatherAPI.com](https://www.weatherapi.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend Setup
 
-### `npm test`
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Configure environment variables:
+   - Copy `.env.example` to `.env`
+   - Add your Weather API key to the `.env` file:
+     ```
+     WEATHER_API_KEY=your_actual_api_key_here
+     PORT=5000
+     ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Start the backend server:
+   ```bash
+   # Development mode with auto-reload
+   npm run dev
+   
+   # Production mode
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   The backend will run on `http://localhost:5000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend Setup
 
-### `npm run eject`
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Configure environment variables:
+   - The `.env` file should already exist
+   - Verify it points to your backend:
+     ```
+     REACT_APP_API_URL=http://localhost:5000
+     ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the frontend development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   The frontend will run on `http://localhost:3000`
 
-## Learn More
+## Running the Full Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Start Backend** (in one terminal):
+   ```bash
+   cd backend
+   npm run dev
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Start Frontend** (in another terminal):
+   ```bash
+   cd frontend
+   npm start
+   ```
 
-### Code Splitting
+3. Open your browser and navigate to `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Endpoints
 
-### Analyzing the Bundle Size
+### Backend API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **GET /** - API information
+- **GET /api/health** - Health check
+- **GET /api/weather?city={city_name}** - Get weather data for a city
 
-### Making a Progressive Web App
+## Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Backend (.env)
+- `PORT` - Server port (default: 5000)
+- `WEATHER_API_KEY` - Your WeatherAPI.com API key
 
-### Advanced Configuration
+### Frontend (.env)
+- `REACT_APP_API_URL` - Backend API URL (default: http://localhost:5000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Features
 
-### Deployment
+- 🌤️ Current weather information
+- 📅 3-day weather forecast
+- 🌡️ Temperature, humidity, wind speed
+- ☀️ UV index with safety levels
+- 🌧️ Chance of rain
+- ⏰ Local time display
+- 🎨 Beautiful animated weather icons
+- ✨ Starry background animation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Technologies Used
 
-### `npm run build` fails to minify
+### Frontend
+- React 18
+- Material-UI (MUI)
+- Axios
+- React Animated Weather
+- SASS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Backend
+- Node.js
+- Express
+- CORS
+- Axios
+- dotenv
+
+## License
+
+ISC
